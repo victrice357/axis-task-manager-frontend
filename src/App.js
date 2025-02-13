@@ -1,26 +1,19 @@
-import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { fetchMessage } from "./axis";  // ✅ Ensure correct import
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Welcome from "./pages/Welcome";
+import SignIn from "./pages/SignIn";
+import Home from "./pages/Home";
+import "./styles.css";
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    fetchMessage().then(data => {
-      console.log("Setting message:", data.message); // ✅ Debugging step
-      setMessage(data.message);
-    });
-  }, []);
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Axis Task Manager</h1>
-        <p>{message}</p>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
