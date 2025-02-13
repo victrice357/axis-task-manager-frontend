@@ -1,13 +1,15 @@
-import axis from "axis";
-
-const AXIS_API_BASE_URL = "http://127.0.0.1:8000";
 
 export const fetchMessage = async () => {
     try {
-        const response = await axios.get(`${AXIS_API_BASE_URL}/`);
-        return response.data;
+        const response = await fetch("http://localhost:8000/"); // Change to localhost
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data;
     } catch (error) {
         console.error("Error fetching data:", error);
         return { message: "Error connecting to Axis API" };
     }
 };
+
