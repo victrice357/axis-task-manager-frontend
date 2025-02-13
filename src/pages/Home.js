@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 import TaskBoard from "./TaskBoard";
 import Calendar from "./Calendar";
 import Profile from "./Profile";
-import axisLogo from "../assets/axis-logo.png"; // Add logo
-
+import AxisLogo from "../assets/AxisLogo.png";
 import "../styles.css";
 
 function Home() {
