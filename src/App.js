@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { fetchMessage } from "./axis";  // ✅ Make sure this import is correct!
+import { fetchMessage } from "./axis";  // ✅ Ensure correct import
 
 function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetchMessage().then(data => setMessage(data.message));
+    fetchMessage().then(data => {
+      console.log("Setting message:", data.message); // ✅ Debugging step
+      setMessage(data.message);
+    });
   }, []);
 
   return (
