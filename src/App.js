@@ -17,13 +17,7 @@
 //   );
 // }
 
-/**
- * The App function renders a welcome message and an image from the public folder in a React component
- * for the Axis Task Manager application.
- * @returns The `App` component is being returned, which contains a logo, a heading "Welcome to Axis
- * Task Manager", and a paragraph describing the purpose of the app.
- */
-export default App;
+// export default App;
 import React from "react";
 import "./styles.css";
 
