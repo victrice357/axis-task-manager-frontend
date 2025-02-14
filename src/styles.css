@@ -1,14 +1,14 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #67686a;
     margin: 0;
     padding: 0;
     text-align: center;
   }
   
   h1, h2, h3 {
-    color: #333;
+    color: #fffafa;
   }
   
   button {
@@ -35,11 +35,24 @@ body {
   }
   
   /* Logo Styling */
-  .logo {
-    width: 150px;
-    margin: 20px auto;
-    display: block;
+ /* Center the logo and make it bigger */
+/* Center the logo and make it bigger */
+.logo {
+    display: block;  /* Makes it behave like a block element */
+    margin: 0 auto;  /* Centers it horizontally */
+    width: 700px;    /* Increase size of the logo */
+    height: auto;    /* Keeps aspect ratio */
   }
+  
+  /* Reduce the height of the container so the logo doesn't appear too small */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;   /* Reduce from 100vh to 60vh */
+  }
+  
+  
   
   /* Welcome Page */
   .welcome-container {
